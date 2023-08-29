@@ -1,2 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #fafafa;
+      /* font-family: Arial, sans-serif; */
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      overflow: auto; /* Change 'hidden' to 'auto' */
+      position: relative;
+    }
 
-hello bhardwaj
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* Ensure particles are rendered behind other elements */
+      pointer-events: none; /* Disable pointer events on the particles container */
+    }
+
+    #particles-js canvas {
+      pointer-events: auto; /* Enable pointer events on the particles canvas */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333333;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #666666;
+      line-height: 1.5;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="container">
+    
+    <h1>Projects Portfolio</h1>
+    
+    <h2>1. High-Availability Kubernetes Deployment on Google Cloud GKE for world's first Sound Wave Tattoo Application</h2>
+    <p>Solely hosted and managed the Sound Wave Tattoo Application, a groundbreaking sound wave tattoo application, on Kubernetes using Google Cloud's GKE (Google Kubernetes Engine) service. Implemented a microservices-based architecture, including modules for image processing, audio upload, sound wave generation, and PDF generation. Leveraged Kubernetes' high availability and scaling capabilities to minimize downtime and ensure business continuity during critical outages, reducing downtime by 30%.</p>
+
+    <h2>2. Infrastructure as Code Setup with Terraform and AWS CodePipeline for Docker Image Builds and ECS Fargate Deployment</h2>
+    <p>Implemented an infrastructure as code (IaC) solution using Terraform and AWS CodePipeline to streamline the deployment process for a Dockerized application. Leveraged Git push events to trigger the build of new Docker images, pushed them to Amazon Elastic Container Registry (ECR), and automated the creation/update of ECS Fargate clusters, task definitions, and services. This automation significantly reduced human interaction by 60%, ensuring faster and more reliable deployments.</p>
+
+    <h2>3. Infrastructure as Code Setup with Terraform for AWS VPC, RDS, and EC2</h2>
+    <p>Implemented an infrastructure as code (IaC) solution using Terraform to automate the provisioning and management of essential AWS resources. Utilized Terraform's declarative syntax to define the desired state of the infrastructure, including the creation of an AWS VPC, RDS database, and EC2 instance. Additionally, leveraged Terraform Cloud to securely store and manage the Terraform state, enabling collaboration and version control within the team.</p>
+
+    <h2>4. Packer to AWS AMIs to Azure VM Images Conversion with Ansible and Shell Provisioner</h2>
+    <p>Led the successful conversion of over 10 Packer AWS Amazon Machine Images (AMIs) into Azure Virtual Machine (VM) Images, facilitating the seamless migration of applications and services to the Azure cloud. Utilized Packer, Ansible, and the Shell provisioner to automate the image creation process and tailored the provisioning configurations to meet the specific requirements of developers, designers, and various environments such as Development (DEV), Staging (STG), and Production (PRD).</p>
+
+    <h2>5. Vault Configuration with AWS Plugin for Short-Lived Access and Policy Management</h2>
+    <p>Implemented and configured Vault, an open-source secrets management and data protection tool, in conjunction with the AWS plugin to efficiently manage short-lived access credentials for AWS accounts. Leveraged this setup to provide secure and controlled access to specific users with defined policies.</p>
+
+    <h2>6. Vault SSH Certificate and OTP Secrets Engine Configuration for Short-Lived Credentials</h2>
+    <p>Successfully implemented and configured Vault's SSH Certificate and OTP secrets engine to provide short-lived credentials for server access. Utilized this setup to enhance security and streamline access management processes for servers within the organization.</p>
+
+    <h2>7. Microservices Migration and ECS Setup for Travel and Ticket Booking Application</h2>
+    <p>Collaborated closely with the project manager to successfully convert a monolithic travel and ticket booking application into a distributed architecture consisting of 12+ microservices. Leveraged Amazon Elastic Container Service (ECS) to deploy and manage the microservices, resulting in a remarkable 60% reduction in downtime for the entire application.</p>
+
+    <h2>8. CI/CD Automation testing with GitHub Actions</h2>
+    <p>Implemented an end-to-end CI/CD automation workflow using GitHub Actions, where the frontend is hosted on Netlify and the backend is hosted on a serverless infrastructure. This setup enabled seamless integration and testing of pull requests (PRs) triggered by events on the main branch. The workflow involved fetching the PR URL from Netlify's GET API, utilizing GitHub's POST API to trigger the Selenium repository's GitHub Actions, and updating the Selenium script to use the custom PR URL for comprehensive testing. In case of test failures, PRs were prevented from merging, while successful tests automatically triggered PR merging using the GitHub API.</p>
+
+    <h2>9. SonarQube Setup and Code Quality Improvement through Jenkins and GitHub Actions</h2>
+    <p>Implemented and configured SonarQube, a leading code quality management platform, in conjunction with Jenkins and GitHub Actions to enhance code standards and improve overall code quality within the organization. This setup resulted in a notable 40% increase in coding standards adherence.</p>
+
+    <h2>10. Automated Project Setup and Deployment with Ansible Playbook</h2>
+    <p>Designed and implemented an Ansible playbook for an IT organization to automate the setup and deployment of projects, significantly reducing user interaction by 60%. The playbook gets the repository SSH URL, database file, .env configuration (if required), PHP version, domain name from the user seamlessly set up the project by fetching the framework (Laravel/Drupal) from composer.json. Additionally, it incorporated SSL setup and sent success/failure notifications via Discord.</p>
+
+    <h2>11. Zero Downtime Deployment CI/CD Setup for Magento 2 with GitHub Actions</h2>
+
+    <h2>12. Efficient Site Hosting and Cost Optimization with S3, CloudFront, and CI/CD</h2>
+    <p>Resulting in significant cost optimization by reducing infrastructure expenses by $1000 per month.</p>
+
+    <h2>13. Effective Error Management and Crash Reporting with Sentry for Multiple Sites</h2>
+    <p>Implemented Sentry, a robust error monitoring and crash reporting platform, across 8+ sites to facilitate real-time error notifications and enhance error management. This setup significantly reduced site errors by 25% through proactive identification and resolution of issues.</p>
+
+    <h2>14. Application Performance Monitoring and Load Speed Optimization with Datadog</h2>
+    <p>Led the successful implementation of Datadog's application performance monitoring (APM) across 20+ sites, resulting in significant improvements in load speed and overall performance. This initiative led to a remarkable 60% increase in site load speed and enabled proactive identification and resolution of performance bottlenecks.</p>
+
+    <h2>15. Prometheus and Grafana Implementation for Monitoring 70+ Nodes with Alerting</h2>
+    <p>Implemented Prometheus, along with the node exporter and CA advisor exporter, and Grafana to establish a comprehensive monitoring solution for 70+ nodes. Monitored critical system metrics such as CPU utilization, disk usage, memory consumption, and Docker container statistics. Configured alert notifications via Slack and email to promptly address any anomalies or critical issues.</p>
+
+    <h2>16. AWS to GCP Migration and Cost Optimization for Multi-Environment Setup</h2>
+    <p>Led the successful migration of various AWS services, including EC2, RDS, Route53, AWS VPC, and AWS CodePipeline, to their respective counterparts in the Google Cloud Platform (GCP). Implemented a multi-environment setup, comprising Production, Staging, and Development environments, using GCP services such as Cloud GPU, Cloud SQL, Cloud DNS, GCP VPC, and GCP CodeBuild. This migration not only ensured a smooth transition but also resulted in substantial cost optimization for the infrastructure.</p>
+
+   </div>
+  <script src="particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('Particles.js loaded!');
+    });
+  </script>
+</body>
+</html>
