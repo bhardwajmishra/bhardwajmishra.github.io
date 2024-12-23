@@ -64,8 +64,19 @@
       bottom: 20px;
       right: 20px;
       font-size: 18px;
-      color: #333;
+      color: #fff;
       font-weight: bold;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Hover effect to highlight the name */
+    .footer-name:hover {
+      background-color: #ff5733;
+      color: #fff;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -84,7 +95,7 @@
     <section>
       <h2>2. Deployment of Node.js and Python Applications on Kubernetes with Ingress Controller</h2>
       <p>
-        Deployed both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller for managing external access. 
+        Deployed both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller to manage external access. 
         Built a scalable and resilient architecture to efficiently handle traffic routing and load balancing.
       </p>
     </section>
@@ -110,7 +121,7 @@
     <section>
       <h2>5. CI/CD Automation Testing with GitHub Actions</h2>
       <p>
-        Implemented CI/CD automation using GitHub Actions. Automated testing workflows integrated with Netlify-hosted frontend and serverless backend. 
+        Implemented CI/CD automation using GitHub Actions. Automated testing workflows were integrated with a Netlify-hosted frontend and serverless backend. 
         Configured Selenium tests for pull requests and enabled conditional PR merging based on test outcomes using GitHub APIs.
       </p>
     </section>
@@ -118,7 +129,7 @@
     <section>
       <h2>6. Efficient Site Hosting and Cost Optimization</h2>
       <p>
-        Optimized site hosting by utilizing S3, CloudFront, and CI/CD workflows, reducing infrastructure costs by $1000 per month.
+        Optimized site hosting by utilizing S3, CloudFront, and CI/CD workflows, reducing infrastructure costs by $1,000 per month.
       </p>
     </section>
 
@@ -126,7 +137,7 @@
       <h2>7. Prometheus and Grafana for Production Monitoring</h2>
       <p>
         Established a monitoring solution for production servers using Prometheus and Grafana. 
-        Monitored critical metrics such as CPU utilization, disk usage, and Docker container stats, with alert notifications via Slack and email.
+        Monitored critical metrics such as CPU utilization, disk usage, and Docker container stats, with alert notifications sent via Slack and email.
       </p>
     </section>
 
