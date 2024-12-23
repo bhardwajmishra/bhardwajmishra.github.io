@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects Portfolio</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
@@ -20,31 +22,37 @@
       pointer-events: none;
     }
 
-    #particles-js canvas {
-      pointer-events: auto;
-    }
-
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 40px;
       border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #333;
+      margin-top: 30px;
     }
 
     h1 {
       text-align: center;
-      color: #333333;
       margin-bottom: 30px;
     }
 
-    h2 {
-      color: #333333;
-      margin-top: 30px;
+    p, ul {
+      color: #666;
+      line-height: 1.6;
     }
 
-    p {
-      color: #666666;
-      line-height: 1.5;
+    ul {
+      margin: 10px 0 20px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
     }
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
@@ -53,43 +61,86 @@
   <div id="particles-js"></div>
   <div class="container">
     <h1>Projects Portfolio</h1>
-    <h2>1. Automated Deployment of Node.js Application on Amazon ECS Using AWS CodePipeline</h2>
-    <p>In this project, I successfully deployed a Node.js application on Amazon ECS using a fully automated CI/CD pipeline powered by AWS CodePipeline. The pipeline was designed to source the application code from GitHub, build a Docker image using AWS CodeBuild, and deploy it to ECS via AWS CodeDeploy.</p>
-   
-    <h2>2. Deployment of Node.js and Python Applications on Kubernetes with Ingress Controller</h2>
-    <p>This project involved deploying both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller to manage external access to the services. The goal was to create a scalable and resilient architecture that efficiently handles traffic routing and load balancing.</p>    
 
-    <h2>3. Infrastructure as Code Setup with Terraform for AWS EC2</h2>
-    <p>Implemented an infrastructure as code (IaC) solution using Terraform to automate the provisioning and management of essential AWS resources. Utilized Terraform's declarative syntax to define the desired state of the infrastructure, including the creation of an AWS EC2 instance. Additionally, leveraged Terraform Cloud to securely store and manage the Terraform state, enabling collaboration and version control within the team.</p>
+    <section>
+      <h2>1. Automated Deployment of Node.js Application on Amazon ECS Using AWS CodePipeline</h2>
+      <p>
+        Successfully deployed a Node.js application on Amazon ECS using a fully automated CI/CD pipeline powered by AWS CodePipeline. 
+        The pipeline sourced the application code from GitHub, built a Docker image using AWS CodeBuild, and deployed it to ECS via AWS CodeDeploy.
+      </p>
+    </section>
 
-    <h2>4. Automated Project Setup and Deployment with Ansible Playbook</h2>
-    <p>Designed and implemented an Ansible playbook for an IT organization to automate the setup and deployment of projects, significantly reducing user interaction by 60%. The playbook gets the repository SSH URL, database file, .env configuration (if required), PHP version, domain name from the user seamlessly set up the project by fetching the framework (Laravel/Drupal) from composer.json. Additionally, it incorporated SSL setup and sent success/failure notifications via Discord.</p>
+    <section>
+      <h2>2. Deployment of Node.js and Python Applications on Kubernetes with Ingress Controller</h2>
+      <p>
+        Deployed both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller for managing external access. 
+        Built a scalable and resilient architecture to efficiently handle traffic routing and load balancing.
+      </p>
+    </section>
 
-    <h2>5. Automated ManageHosting Tasks with Ansible Playbook</h2>
-    <p>Created and implemented an Ansible playbook for microservices, such as creating an AWS S3 bucket, uploading database backups there, restoring them from S3, and updating the server. Utilizing an Ansible playbook, built a Git repository. Set the nginx configuration file's PHP version. Constructed a Digital Ocean droplet and then installed PHP, nginx, and MySQL on the newly formed server. Created a DNS record on Cloudflare using a playbook.</p>
+    <section>
+      <h2>3. Infrastructure as Code Setup with Terraform for AWS EC2</h2>
+      <p>
+        Implemented Infrastructure as Code (IaC) using Terraform to automate the provisioning and management of AWS resources. 
+        Defined infrastructure states, including an AWS EC2 instance, using Terraform’s declarative syntax. 
+        Leveraged Terraform Cloud for secure state management and collaboration.
+      </p>
+    </section>
 
-    <h2>6. CI/CD Automation Testing with GitHub Actions</h2>
-    <p>Implemented an end-to-end CI/CD automation workflow using GitHub Actions, where the frontend is hosted on Netlify and the backend is hosted on a serverless infrastructure. This setup enabled seamless integration and testing of pull requests (PRs) triggered by events on the main branch. The workflow involved fetching the PR URL from Netlify's GET API, utilizing GitHub's POST API to trigger the Selenium repository's GitHub Actions, and updating the Selenium script to use the custom PR URL for comprehensive testing. In case of test failures, PRs were prevented from merging, while successful tests automatically triggered PR merging using the GitHub API.</p>
+    <section>
+      <h2>4. Automated Project Setup and Deployment with Ansible Playbook</h2>
+      <p>
+        Designed an Ansible playbook to automate project setup and deployment, reducing manual tasks by 60%. 
+        Automated tasks included fetching repository SSH URLs, configuring .env files, managing PHP versions, and setting up SSL. 
+        Success and failure notifications were integrated via Discord.
+      </p>
+    </section>
 
-    <h2>7. Efficient Site Hosting and Cost Optimization with S3, CloudFront, and CI/CD</h2>
-    <p>Resulting in significant cost optimization by reducing infrastructure expenses by $1000 per month.</p>
+    <section>
+      <h2>5. CI/CD Automation Testing with GitHub Actions</h2>
+      <p>
+        Implemented CI/CD automation using GitHub Actions. Automated testing workflows integrated with Netlify-hosted frontend and serverless backend. 
+        Configured Selenium tests for pull requests and enabled conditional PR merging based on test outcomes using GitHub APIs.
+      </p>
+    </section>
 
-    <h2>8. Prometheus and Grafana Implementation for Monitoring Production Server</h2>
-    <p>Implemented Prometheus, along with the node exporter and CA advisor exporter, and Grafana to establish a comprehensive monitoring solution for the production server. Monitored critical system metrics such as CPU utilization, disk usage, memory consumption, and Docker container statistics. Configured alert notifications via Slack and email to promptly address any anomalies or critical issues.</p>
+    <section>
+      <h2>6. Efficient Site Hosting and Cost Optimization</h2>
+      <p>
+        Optimized site hosting by utilizing S3, CloudFront, and CI/CD workflows, reducing infrastructure costs by $1000 per month.
+      </p>
+    </section>
 
-    <h2>9. Automated Functionalities for app.wewp.io with Ansible</h2>
-    <p>Automated essential functionalities for app.wewp.io, including:  
+    <section>
+      <h2>7. Prometheus and Grafana for Production Monitoring</h2>
+      <p>
+        Established a monitoring solution for production servers using Prometheus and Grafana. 
+        Monitored critical metrics such as CPU utilization, disk usage, and Docker container stats, with alert notifications via Slack and email.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Automated Functionalities for app.wewp.io with Ansible</h2>
+      <p>
+        Automated key functionalities of app.wewp.io, including:
+      </p>
       <ul>
         <li>Creating GitHub repositories.</li>
-        <li>Creating domains and provisioning servers on DigitalOcean.</li>
+        <li>Provisioning domains and servers on DigitalOcean.</li>
         <li>Setting up WordPress sites on created servers.</li>
-        <li>Changing primary site domains and adding additional domains.</li>
+        <li>Changing primary domains and adding additional domains.</li>
         <li>Developing backup and restore functionalities.</li>
         <li>Cloning and copying WordPress sites.</li>
         <li>Implementing basic authentication for website security.</li>
+        <li>Creating AWS S3 buckets for database backups.</li>
+        <li>Restoring backups from S3 and updating servers.</li>
+        <li>Building Git repositories and configuring Nginx for PHP versions.</li>
+        <li>Provisioning DigitalOcean droplets and installing required software.</li>
+        <li>Creating DNS records on Cloudflare.</li>
       </ul>
-    </p>
+    </section>
   </div>
+
   <script src="particles.js"></script>
   <script>
     particlesJS.load('particles-js', 'particles.json', function() {
