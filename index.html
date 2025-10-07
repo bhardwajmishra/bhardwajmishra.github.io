@@ -72,6 +72,35 @@
       border-radius: 5px;
       transition: background-color 0.3s, color 0.3s;
     }
+    /* Email button */
+    .email-link {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .email-link:hover {
+      background-color: #ff5733;
+      transform: scale(1.05);
+    }
+
+    .email-link img {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      filter: invert(1);
+    }
 
     /* Hover effect to highlight the name */
     .footer-name:hover {
@@ -163,13 +192,17 @@
     </section>
   </div>
 
- <!-- Footer LinkedIn button -->
-  <a href="https://www.linkedin.com/in/bhardwaj-mishra/" target="_blank" class="footer-name">
+  <!-- Footer LinkedIn button -->
+  <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="footer-name">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn Logo">
     Bhardwaj Mishra
   </a>
 
   <!-- Email button -->
-  <a href="mailto:bhardwaj.28.m@gmail.com" class="email-link">📧 your.email@example.com</a>
+  <a href="mailto:bhardwaj.28.m@gmail.com" class="email-link">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email Logo">
+    bhardwaj.28.m@gmail.com
+  </a>
 </body>
 </html>
+
