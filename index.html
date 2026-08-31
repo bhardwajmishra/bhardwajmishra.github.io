@@ -21,9 +21,9 @@
     }
 
     .container {
-      max-width: 860px;
-      margin: 50px auto;
-      padding: 0 20px 100px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 40px 100px;
     }
 
     /* Header */
@@ -61,7 +61,7 @@
     section {
       background: #fff;
       border-radius: 12px;
-      padding: 28px 32px;
+      padding: 32px 40px;
       margin-bottom: 20px;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
       border-left: 4px solid #0f3460;
@@ -75,26 +75,26 @@
     }
 
     h2 {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: #0f3460;
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       line-height: 1.4;
     }
 
     p {
       color: #555;
-      line-height: 1.7;
+      line-height: 1.75;
       margin: 0 0 12px;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
     ul {
       color: #555;
-      line-height: 1.7;
+      line-height: 1.75;
       margin: 8px 0 0;
-      padding-left: 20px;
-      font-size: 0.95rem;
+      padding-left: 22px;
+      font-size: 1rem;
     }
 
     ul li {
@@ -173,10 +173,11 @@
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .container { padding: 0 20px 100px; }
       .hero { padding: 36px 24px; }
       .hero h1 { font-size: 1.6rem; }
-      section { padding: 22px 20px; }
+      section { padding: 24px 22px; }
       .btn-linkedin, .btn-email { font-size: 12px; padding: 10px 14px; }
     }
   </style>
@@ -191,98 +192,7 @@
     </div>
 
     <section>
-      <h2>1. Automated Deployment of Node.js Application on Amazon ECS Using AWS CodePipeline</h2>
-      <p>
-        Deployed a Node.js application on Amazon ECS and implemented a CI/CD pipeline using AWS CodePipeline. The pipeline automates the workflow by sourcing code from GitHub, building a Docker image with AWS CodeBuild, and deploying updates seamlessly to ECS using AWS CodeDeploy.
-      </p>
-    </section>
-
-    <section>
-      <h2>2. Deployment of Node.js and Python Applications on Kubernetes with Ingress Controller</h2>
-      <p>
-        Deployed both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller to manage external access.
-        Built a scalable and resilient architecture to efficiently handle traffic routing and load balancing.
-      </p>
-    </section>
-
-    <section>
-      <h2>3. Infrastructure as Code Setup with Terraform for AWS EC2</h2>
-      <p>
-        Implemented Infrastructure as Code (IaC) using Terraform to automate the provisioning and management of AWS resources.
-        Defined infrastructure states, including an AWS EC2 instance, using Terraform's declarative syntax.
-        Leveraged Terraform Cloud for secure state management and collaboration.
-      </p>
-    </section>
-
-    <section>
-      <h2>4. Automated Project Setup and Deployment with Ansible Playbook</h2>
-      <p>
-        Designed an Ansible playbook to automate project setup and deployment, reducing manual tasks by 60%.
-        Automated tasks included fetching repository SSH URLs, configuring .env files, managing PHP versions, and setting up SSL.
-        Success and failure notifications were integrated via Discord.
-      </p>
-    </section>
-
-    <section>
-      <h2>5. CI/CD Automation Testing with GitHub Actions</h2>
-      <p>
-        Implemented CI/CD automation using GitHub Actions. Automated testing workflows were integrated with a Netlify-hosted frontend and serverless backend.
-        Configured Selenium tests for pull requests and enabled conditional PR merging based on test outcomes using GitHub APIs.
-      </p>
-    </section>
-
-    <section>
-      <h2>6. Efficient Site Hosting and Cost Optimization</h2>
-      <p>
-        Optimized site hosting by utilizing S3, CloudFront, and CI/CD workflows, reducing infrastructure costs by <strong>$1,000 per month</strong>.
-      </p>
-    </section>
-
-    <section>
-      <h2>7. Prometheus and Grafana for Production Monitoring</h2>
-      <p>
-        Established a monitoring solution for production servers using Prometheus and Grafana.
-        Monitored critical metrics such as CPU utilization, disk usage, and Docker container stats, with alert notifications sent via Slack and email.
-      </p>
-    </section>
-
-    <section>
-      <h2>8. Automated Functionalities for app.wewp.io with Ansible</h2>
-      <p>Automated key functionalities of app.wewp.io, including:</p>
-      <ul>
-        <li>Creating GitHub repositories.</li>
-        <li>Provisioning domains on Cloudflare and servers on DigitalOcean.</li>
-        <li>Configuring servers as per application dependencies (NGINX, PHP with all versions, MySQL, Let's Encrypt).</li>
-        <li>Setting up WordPress sites on created servers.</li>
-        <li>Changing primary domains and adding additional domains.</li>
-        <li>Developing backup and restore functionalities.</li>
-        <li>Cloning and copying WordPress sites.</li>
-        <li>Implementing basic authentication for website security.</li>
-        <li>Creating AWS S3 buckets for database backups.</li>
-        <li>Restoring backups from S3 and updating servers.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>9. Scalable Full Stack Application Deployment on AWS</h2>
-      <p>
-        Designed and deployed a <strong>highly available, secure, and cost-optimized full-stack web application</strong> on AWS using a modern cloud-native architecture.
-        The setup includes a Node.js backend, React frontend, and MongoDB Atlas database.
-      </p>
-      <ul>
-        <li>Configured <strong>Auto Scaling</strong> and <strong>Application Load Balancer</strong> for dynamic backend scalability and traffic management.</li>
-        <li>Hosted the <strong>React frontend</strong> on Amazon S3 with <strong>CloudFront CDN</strong> for fast, global content delivery.</li>
-        <li>Deployed the <strong>Node.js backend</strong> on Amazon EC2 within a private VPC for enhanced security.</li>
-        <li>Connected to <strong>MongoDB Atlas</strong> using <strong>AWS PrivateLink</strong>, ensuring no public data exposure.</li>
-        <li>Used <strong>Cloudflare</strong> for DNS and CDN management and <strong>AWS ACM</strong> for SSL certificate automation.</li>
-        <li>Managed secrets and credentials securely through <strong>AWS Secrets Manager</strong>.</li>
-        <li>Implemented monitoring and alerting using <strong>Amazon CloudWatch</strong> for application insights and performance tracking.</li>
-      </ul>
-      <p>This architecture ensures <strong>scalability, security, high availability,</strong> and <strong>optimized performance</strong> for production workloads.</p>
-    </section>
-
-    <section>
-      <h2>10. Scalable Private Cloud Infrastructure for a PropTech Platform</h2>
+      <h2>1. Scalable Private Cloud Infrastructure for a PropTech Platform</h2>
       <p>
         Designed and deployed a <strong>secure, scalable private AWS infrastructure</strong> for a production PropTech platform, ensuring all backend communication remains within a private network with zero public exposure.
       </p>
@@ -298,7 +208,7 @@
     </section>
 
     <section>
-      <h2>11. Infrastructure & Platform Operations for a Multichannel eCommerce Platform</h2>
+      <h2>2. Infrastructure & Platform Operations for a Multichannel eCommerce Platform</h2>
       <p>
         Managed and operated the <strong>large-scale self-managed server infrastructure</strong> for a multichannel eCommerce platform serving online resellers across multiple European marketplaces.
       </p>
@@ -316,10 +226,101 @@
       </p>
     </section>
 
+    <section>
+      <h2>3. Automated Deployment of Node.js Application on Amazon ECS Using AWS CodePipeline</h2>
+      <p>
+        Deployed a Node.js application on Amazon ECS and implemented a CI/CD pipeline using AWS CodePipeline. The pipeline automates the workflow by sourcing code from GitHub, building a Docker image with AWS CodeBuild, and deploying updates seamlessly to ECS using AWS CodeDeploy.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Deployment of Node.js and Python Applications on Kubernetes with Ingress Controller</h2>
+      <p>
+        Deployed both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller to manage external access.
+        Built a scalable and resilient architecture to efficiently handle traffic routing and load balancing.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Infrastructure as Code Setup with Terraform for AWS EC2</h2>
+      <p>
+        Implemented Infrastructure as Code (IaC) using Terraform to automate the provisioning and management of AWS resources.
+        Defined infrastructure states, including an AWS EC2 instance, using Terraform's declarative syntax.
+        Leveraged Terraform Cloud for secure state management and collaboration.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Automated Project Setup and Deployment with Ansible Playbook</h2>
+      <p>
+        Designed an Ansible playbook to automate project setup and deployment, reducing manual tasks by 60%.
+        Automated tasks included fetching repository SSH URLs, configuring .env files, managing PHP versions, and setting up SSL.
+        Success and failure notifications were integrated via Discord.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. CI/CD Automation Testing with GitHub Actions</h2>
+      <p>
+        Implemented CI/CD automation using GitHub Actions. Automated testing workflows were integrated with a Netlify-hosted frontend and serverless backend.
+        Configured Selenium tests for pull requests and enabled conditional PR merging based on test outcomes using GitHub APIs.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Efficient Site Hosting and Cost Optimization</h2>
+      <p>
+        Optimized site hosting by utilizing S3, CloudFront, and CI/CD workflows, reducing infrastructure costs by <strong>$1,000 per month</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Prometheus and Grafana for Production Monitoring</h2>
+      <p>
+        Established a monitoring solution for production servers using Prometheus and Grafana.
+        Monitored critical metrics such as CPU utilization, disk usage, and Docker container stats, with alert notifications sent via Slack and email.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Automated Functionalities for app.wewp.io with Ansible</h2>
+      <p>Automated key functionalities of app.wewp.io, including:</p>
+      <ul>
+        <li>Creating GitHub repositories.</li>
+        <li>Provisioning domains on Cloudflare and servers on DigitalOcean.</li>
+        <li>Configuring servers as per application dependencies (NGINX, PHP with all versions, MySQL, Let's Encrypt).</li>
+        <li>Setting up WordPress sites on created servers.</li>
+        <li>Changing primary domains and adding additional domains.</li>
+        <li>Developing backup and restore functionalities.</li>
+        <li>Cloning and copying WordPress sites.</li>
+        <li>Implementing basic authentication for website security.</li>
+        <li>Creating AWS S3 buckets for database backups.</li>
+        <li>Restoring backups from S3 and updating servers.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>11. Scalable Full Stack Application Deployment on AWS</h2>
+      <p>
+        Designed and deployed a <strong>highly available, secure, and cost-optimized full-stack web application</strong> on AWS using a modern cloud-native architecture.
+        The setup includes a Node.js backend, React frontend, and MongoDB Atlas database.
+      </p>
+      <ul>
+        <li>Configured <strong>Auto Scaling</strong> and <strong>Application Load Balancer</strong> for dynamic backend scalability and traffic management.</li>
+        <li>Hosted the <strong>React frontend</strong> on Amazon S3 with <strong>CloudFront CDN</strong> for fast, global content delivery.</li>
+        <li>Deployed the <strong>Node.js backend</strong> on Amazon EC2 within a private VPC for enhanced security.</li>
+        <li>Connected to <strong>MongoDB Atlas</strong> using <strong>AWS PrivateLink</strong>, ensuring no public data exposure.</li>
+        <li>Used <strong>Cloudflare</strong> for DNS and CDN management and <strong>AWS ACM</strong> for SSL certificate automation.</li>
+        <li>Managed secrets and credentials securely through <strong>AWS Secrets Manager</strong>.</li>
+        <li>Implemented monitoring and alerting using <strong>Amazon CloudWatch</strong> for application insights and performance tracking.</li>
+      </ul>
+      <p>This architecture ensures <strong>scalability, security, high availability,</strong> and <strong>optimized performance</strong> for production workloads.</p>
+    </section>
+
   </div>
 
   <!-- LinkedIn button -->
-  <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="btn-linkedin">
+  <a href="https://www.linkedin.com/in/bhardwaj-mishra" target="_blank" class="btn-linkedin">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
     Bhardwaj Mishra
   </a>
