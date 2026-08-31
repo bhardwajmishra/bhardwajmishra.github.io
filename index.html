@@ -3,147 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="description" content="Portfolio of Bhardwaj Mishra — DevOps & Cloud Infrastructure Engineer specializing in AWS, Kubernetes, and CI/CD automation.">
+  <title>Bhardwaj Mishra — DevOps & Cloud Engineer</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
 
     body {
-      background: linear-gradient(120deg, #ffffff, #f0f0f0);
-      font-family: 'Times New Roman', Times, serif;
+      background: #f4f6f9;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       margin: 0;
       padding: 0;
-      overflow: auto;
-      animation: backgroundFade 6s infinite alternate;
-    }
-
-    @keyframes backgroundFade {
-      0% { background: linear-gradient(120deg, #ffffff, #f0f0f0); }
-      100% { background: linear-gradient(120deg, #e8e8e8, #ffffff); }
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 50px 200px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h1, h2 {
       color: #333;
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
+    .container {
+      max-width: 860px;
+      margin: 50px auto;
+      padding: 0 20px 100px;
     }
 
-    p, ul {
-      color: #666;
-      line-height: 1.6;
+    /* Header */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #fff;
+      border-radius: 14px;
+      padding: 50px 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #a8c0e8;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Project cards */
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+      border-left: 4px solid #0f3460;
+      transition: box-shadow 0.2s, transform 0.2s;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section:hover {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0f3460;
+      margin: 0 0 12px;
+      line-height: 1.4;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.7;
+      margin: 0 0 12px;
+      font-size: 0.95rem;
     }
 
     ul {
-      margin: 10px 0 20px;
+      color: #555;
+      line-height: 1.7;
+      margin: 8px 0 0;
       padding-left: 20px;
+      font-size: 0.95rem;
     }
 
     ul li {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
-    /* New CSS for the name */
-    .footer-name {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      font-size: 18px;
-      color: #fff;
-      font-weight: bold;
-      background-color: #333;
-      padding: 10px;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
+    strong {
+      color: #1a1a2e;
+      font-weight: 600;
     }
 
-        /* LinkedIn button */
-    .footer-name {
+    /* LinkedIn button */
+    .btn-linkedin {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 24px;
+      right: 24px;
       display: flex;
       align-items: center;
       background-color: #0077b5;
       color: #fff;
-      font-weight: bold;
-      font-size: 16px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
       padding: 12px 20px;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 4px 14px rgba(0, 119, 181, 0.4);
+      transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      z-index: 100;
     }
 
-    .footer-name:hover {
+    .btn-linkedin:hover {
       background-color: #005c8b;
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 119, 181, 0.5);
     }
 
-    .footer-name img {
-      width: 12px;   /* 🔹 Smaller LinkedIn icon */
-      height: 12px;
-      margin-right: 8px;
-    }
-
-    /* Email button */
-    .email-link {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      background-color: #333;
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .email-link:hover {
-      background-color: #ff5733;
-      transform: scale(1.05);
-    }
-
-    .email-link img {
-      width: 18px;
-      height: 18px;
+    .btn-linkedin img {
+      width: 16px;
+      height: 16px;
       margin-right: 8px;
       filter: invert(1);
     }
 
-    /* Hover effect to highlight the name */
-    .footer-name:hover {
-      background-color: #ff5733;
+    /* Email button */
+    .btn-email {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      display: flex;
+      align-items: center;
+      background-color: #1a1a2e;
       color: #fff;
-      cursor: pointer;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      z-index: 100;
+    }
+
+    .btn-email:hover {
+      background-color: #e74c3c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4);
+    }
+
+    .btn-email img {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      filter: invert(1);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero { padding: 36px 24px; }
+      .hero h1 { font-size: 1.6rem; }
+      section { padding: 22px 20px; }
+      .btn-linkedin, .btn-email { font-size: 12px; padding: 10px 14px; }
     }
   </style>
-  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
   <div class="container">
-    <h1>Projects Portfolio</h1>
+
+    <!-- Hero Header -->
+    <div class="hero">
+      <h1>Bhardwaj Mishra</h1>
+      <p>DevOps & Cloud Infrastructure Engineer &nbsp;|&nbsp; AWS &nbsp;·&nbsp; Kubernetes &nbsp;·&nbsp; CI/CD &nbsp;·&nbsp; Terraform &nbsp;·&nbsp; Ansible</p>
+    </div>
 
     <section>
       <h2>1. Automated Deployment of Node.js Application on Amazon ECS Using AWS CodePipeline</h2>
@@ -155,7 +200,7 @@
     <section>
       <h2>2. Deployment of Node.js and Python Applications on Kubernetes with Ingress Controller</h2>
       <p>
-        Deployed both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller to manage external access. 
+        Deployed both Node.js and Python applications on a Kubernetes (K8s) cluster, utilizing an Ingress controller to manage external access.
         Built a scalable and resilient architecture to efficiently handle traffic routing and load balancing.
       </p>
     </section>
@@ -163,8 +208,8 @@
     <section>
       <h2>3. Infrastructure as Code Setup with Terraform for AWS EC2</h2>
       <p>
-        Implemented Infrastructure as Code (IaC) using Terraform to automate the provisioning and management of AWS resources. 
-        Defined infrastructure states, including an AWS EC2 instance, using Terraform’s declarative syntax. 
+        Implemented Infrastructure as Code (IaC) using Terraform to automate the provisioning and management of AWS resources.
+        Defined infrastructure states, including an AWS EC2 instance, using Terraform's declarative syntax.
         Leveraged Terraform Cloud for secure state management and collaboration.
       </p>
     </section>
@@ -172,8 +217,8 @@
     <section>
       <h2>4. Automated Project Setup and Deployment with Ansible Playbook</h2>
       <p>
-        Designed an Ansible playbook to automate project setup and deployment, reducing manual tasks by 60%. 
-        Automated tasks included fetching repository SSH URLs, configuring .env files, managing PHP versions, and setting up SSL. 
+        Designed an Ansible playbook to automate project setup and deployment, reducing manual tasks by 60%.
+        Automated tasks included fetching repository SSH URLs, configuring .env files, managing PHP versions, and setting up SSL.
         Success and failure notifications were integrated via Discord.
       </p>
     </section>
@@ -181,7 +226,7 @@
     <section>
       <h2>5. CI/CD Automation Testing with GitHub Actions</h2>
       <p>
-        Implemented CI/CD automation using GitHub Actions. Automated testing workflows were integrated with a Netlify-hosted frontend and serverless backend. 
+        Implemented CI/CD automation using GitHub Actions. Automated testing workflows were integrated with a Netlify-hosted frontend and serverless backend.
         Configured Selenium tests for pull requests and enabled conditional PR merging based on test outcomes using GitHub APIs.
       </p>
     </section>
@@ -189,27 +234,25 @@
     <section>
       <h2>6. Efficient Site Hosting and Cost Optimization</h2>
       <p>
-        Optimized site hosting by utilizing S3, CloudFront, and CI/CD workflows, reducing infrastructure costs by $1,000 per month.
+        Optimized site hosting by utilizing S3, CloudFront, and CI/CD workflows, reducing infrastructure costs by <strong>$1,000 per month</strong>.
       </p>
     </section>
 
     <section>
       <h2>7. Prometheus and Grafana for Production Monitoring</h2>
       <p>
-        Established a monitoring solution for production servers using Prometheus and Grafana. 
+        Established a monitoring solution for production servers using Prometheus and Grafana.
         Monitored critical metrics such as CPU utilization, disk usage, and Docker container stats, with alert notifications sent via Slack and email.
       </p>
     </section>
 
     <section>
       <h2>8. Automated Functionalities for app.wewp.io with Ansible</h2>
-      <p>
-        Automated key functionalities of app.wewp.io, including:
-      </p>
+      <p>Automated key functionalities of app.wewp.io, including:</p>
       <ul>
         <li>Creating GitHub repositories.</li>
-        <li>Provisioning domains on cloudflare and servers on DigitalOcean.</li>
-        <li>Configure the server as per application dependencies.(Like installing and configuring NGINX,PHP with all version,MySQL,Let's Encrypt) </li>
+        <li>Provisioning domains on Cloudflare and servers on DigitalOcean.</li>
+        <li>Configuring servers as per application dependencies (NGINX, PHP with all versions, MySQL, Let's Encrypt).</li>
         <li>Setting up WordPress sites on created servers.</li>
         <li>Changing primary domains and adding additional domains.</li>
         <li>Developing backup and restore functionalities.</li>
@@ -219,10 +262,11 @@
         <li>Restoring backups from S3 and updating servers.</li>
       </ul>
     </section>
-      <section>
+
+    <section>
       <h2>9. Scalable Full Stack Application Deployment on AWS</h2>
       <p>
-        Designed and deployed a <strong>highly available, secure, and cost-optimized full-stack web application</strong> on AWS using a modern cloud-native architecture. 
+        Designed and deployed a <strong>highly available, secure, and cost-optimized full-stack web application</strong> on AWS using a modern cloud-native architecture.
         The setup includes a Node.js backend, React frontend, and MongoDB Atlas database.
       </p>
       <ul>
@@ -234,24 +278,56 @@
         <li>Managed secrets and credentials securely through <strong>AWS Secrets Manager</strong>.</li>
         <li>Implemented monitoring and alerting using <strong>Amazon CloudWatch</strong> for application insights and performance tracking.</li>
       </ul>
+      <p>This architecture ensures <strong>scalability, security, high availability,</strong> and <strong>optimized performance</strong> for production workloads.</p>
+    </section>
+
+    <section>
+      <h2>10. Scalable Private Cloud Infrastructure for a PropTech Platform</h2>
       <p>
-        This architecture ensures <strong>scalability, security, high availability,</strong> and <strong>optimized performance</strong> for production workloads.
+        Designed and deployed a <strong>secure, scalable private AWS infrastructure</strong> for a production PropTech platform, ensuring all backend communication remains within a private network with zero public exposure.
+      </p>
+      <ul>
+        <li>Architected a custom <strong>VPC with public and private subnets</strong> across availability zones for high availability and network isolation.</li>
+        <li>Deployed a <strong>Node.js backend</strong> on EC2 instances within private subnets, ensuring no direct internet access to application servers.</li>
+        <li>Established a secure connection to <strong>MongoDB Atlas</strong> using <strong>AWS PrivateLink</strong>, routing all database traffic through the private subnet without traversing the public internet.</li>
+        <li>Configured an <strong>Application Load Balancer (ALB)</strong> to distribute incoming traffic across backend instances for reliability and performance.</li>
+        <li>Implemented <strong>Auto Scaling</strong> to dynamically adjust EC2 capacity based on traffic demand, ensuring cost efficiency and uptime.</li>
+        <li>Utilized <strong>Amazon S3</strong> for scalable object storage integrated within the private infrastructure.</li>
+      </ul>
+      <p>This architecture delivers a <strong>production-grade, fully private cloud environment</strong> with strong security boundaries, horizontal scalability, and resilience for real estate application workloads.</p>
+    </section>
+
+    <section>
+      <h2>11. Infrastructure & Platform Operations for a Multichannel eCommerce Platform</h2>
+      <p>
+        Managed and operated the <strong>large-scale self-managed server infrastructure</strong> for a multichannel eCommerce platform serving online resellers across multiple European marketplaces.
+      </p>
+      <ul>
+        <li>Administered and maintained a fleet of <strong>50+ self-managed servers</strong>, ensuring uptime, performance, and reliability for production Java applications.</li>
+        <li>Provided <strong>database support to development teams</strong> — including querying, updating, and removing data — as well as taking database backups and sharing them with the dev team for debugging and testing purposes.</li>
+        <li>Managed <strong>database replication</strong> across multiple DB servers, ensuring data consistency and availability across the infrastructure.</li>
+        <li>Authored Kubernetes manifests including <strong>deployment.yml, configmap.yaml, rbac.yaml, serviceaccount.yaml, and service.yaml</strong> to deploy Java applications on a K8s environment.</li>
+        <li>Integrated <strong>Helm</strong> for templated, repeatable Kubernetes deployments across environments.</li>
+        <li>Configured a <strong>GitLab CI/CD pipeline</strong> to automate build and deployment workflows for Java applications on Kubernetes.</li>
+        <li>Designed and deployed a <strong>full monitoring stack</strong> over the infrastructure, providing observability into server health, application performance, and alerting for incidents.</li>
+      </ul>
+      <p>
+        This engagement involved hands-on ownership of a complex, high-scale infrastructure environment, bridging the gap between development and operations across a distributed server fleet and Kubernetes workloads.
       </p>
     </section>
+
   </div>
 
-
-  <!-- Footer LinkedIn button -->
-  <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="footer-name">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn Logo">
+  <!-- LinkedIn button -->
+  <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="btn-linkedin">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
     Bhardwaj Mishra
   </a>
 
   <!-- Email button -->
-  <a href="mailto:bhardwaj.28.m@gmail.com" class="email-link">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email Logo">
+  <a href="mailto:bhardwaj.28.m@gmail.com" class="btn-email">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
     bhardwaj.28.m@gmail.com
   </a>
 </body>
 </html>
-
